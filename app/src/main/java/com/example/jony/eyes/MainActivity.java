@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getIceServers();
         SignallingClient.getInstance().init(this);
 
-        start();
+       start();
     }
 
 
@@ -470,4 +470,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         return null;
     }
+    //mazen
+    @Override
+    public void cmd(String cmd) {
+        showToast("cmd is: " + cmd);
+    }
+    // end mazen
 }

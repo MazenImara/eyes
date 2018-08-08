@@ -142,6 +142,9 @@ class SignallingClient {
                     }
                 }
             });
+            // mazen
+            socket.on("cmd", args -> callback.cmd((String) args[0]));
+            // end mazen
         } catch (URISyntaxException | NoSuchAlgorithmException | KeyManagementException e) {
             e.printStackTrace();
         }
@@ -209,5 +212,8 @@ class SignallingClient {
         void onJoinedRoom();
 
         void onNewPeerJoined();
+        // mazen
+        void cmd(String cmd);
+        // end mazen
     }
 }
